@@ -17,14 +17,14 @@ export default ({ moedaA, moedaB }) => {
     setCurB(moedaB);
     }, []);
 
- async function converter() {
+  function converter() {
    const de_para = `${moedaA}_${moedaB}`;
-   await api.get(`api/v7/convert?q=${de_para}&compact=ultra&apiKey=${APIKEY}`).then(res => {
+   api.get(`api/v7/convert?q=${de_para}&compact=ultra&apiKey=${APIKEY}`).then(res => {
      return res
    })
    .then((res) => {
     const cot = res.data[de_para];
-    const moedaBValue = (parseFloat(curAValue) * cot).toFixed(2);
+    const moedaBValue = (Number(curAValue) * cot).toFixed(2);
     setcurBValue(moedaBValue);
    })
   };
@@ -34,7 +34,11 @@ export default ({ moedaA, moedaB }) => {
         <h1>{curA} para {curB}</h1>
         <input placeholder='Value:' type="number" onChange={(e) => setcurAValue(e.target.value)}/>
         <button type='button' onClick={() => converter()}>Converter</button>
-        <h2>{curBValue}</h2>
+        <h2>
+          {
+            `Valor em ${moedaB} é: ${curBValue}`
+          }
+        </h2>
     </div>
   )
 }

@@ -8,9 +8,9 @@ function App() {
       <h1>Conversor</h1>
       <div className='components'>
         <Conversor moedaA='USD' moedaB='BRL' />
-        <Conversor moedaA='USD' moedaB='BRL' />
-        <Conversor moedaA='USD' moedaB='BRL' />
-        <Conversor moedaA='USD' moedaB='BRL' />
+        <Conversor moedaA='BRL' moedaB='CAD' />
+        <Conversor moedaA='BRL' moedaB='USD' />
+        <Conversor moedaA='CAD' moedaB='BRL' />
       </div>
     </div>
   );
