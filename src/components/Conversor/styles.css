@@ -1,0 +1,13 @@
+.conversorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  border: 1px solid rgba(224, 49, 34, 0.5);
+  border-radius: 15px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 30px 5px rgba(79, 146, 224, 0.2);
+}

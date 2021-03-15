@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 import api from '../../services/api';
-const APIKEY = '[CASO A API TENHA UMA KEY]';
+const APIKEY = '09b2524bfe2fe175b3c8';
 
 import './styles.css';
 
@@ -30,11 +30,11 @@ export default ({ moedaA, moedaB }) => {
   };
 
   return (
-    <div className='container'>
-      <h1>{curA} para {curB}</h1>
-      <input type="number" onChange={(e) => setcurAValue(e.target.value)}/>
-      <button type='button' onClick={() => converter()}>Converter</button>
-      <h2>{curBValue}</h2>
+      <div className='conversorContainer'>
+        <h1>{curA} para {curB}</h1>
+        <input placeholder='Value:' type="number" onChange={(e) => setcurAValue(e.target.value)}/>
+        <button type='button' onClick={() => converter()}>Converter</button>
+        <h2>{curBValue}</h2>
     </div>
   )
 }
